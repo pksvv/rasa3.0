@@ -39,7 +39,21 @@ class ActionPlayRPS(Action):
         dispatcher.utter_message(text=f'You chose {user_choice}')
         comp_choice = self.computer_choice()
         dispatcher.utter_message(text=f'The computer chose {comp_choice}')
-        
+
+        if user_choice == "rock" and comp_choice == "scissors":
+            dispatcher.utter_message(text = 'Congrats ! You won.')
+        elif user_choice == "rock" and comp_choice == "paper":
+            dispatcher.utter_message(text = 'The computer won this round.')
+        if user_choice == "paper" and comp_choice == "rock":
+            dispatcher.utter_message(text = 'Congrats ! You won.')
+        elif user_choice == "paper" and comp_choice == "scissors":
+            dispatcher.utter_message(text = 'The computer won this round.')
+        if user_choice == "scissors" and comp_choice == "paper":
+            dispatcher.utter_message(text = 'Congrats ! You won.')
+        elif user_choice == "scissors" and comp_choice == "rock":
+            dispatcher.utter_message(text = 'The computer won this round.')
+        else:
+            dispatcher.utter_message(text='It was a tie !!')
 
 
         # dispatcher.utter_message(text="Hello World!")
