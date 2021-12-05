@@ -21,4 +21,3 @@ stories:
   - action: utter_play_again
   - intent: deny
   - action: utter_goodbye
-  
