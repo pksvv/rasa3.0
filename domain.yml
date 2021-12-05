@@ -13,7 +13,7 @@ entities:
 
 slots:
   choice:
-    type: catgoricals
+    type: categorical
     values:
       - rock
       - paper
